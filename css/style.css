@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+  --coklat: #a9746e;
+  --krem: #fbeee0;
+  --putih: #ffffff;
+  --hitam: #222;
+  --shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--krem);
+  color: var(--hitam);
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--putih);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.8rem;
+  color: var(--coklat);
+}
+
+.navbar nav ul {
+  display: flex;
+  gap: 1.2rem;
+  list-style: none;
+}
+
+.navbar nav ul li a {
+  text-decoration: none;
+  color: var(--hitam);
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.navbar nav ul li a:hover,
+.navbar nav ul li a.active {
+  background-color: var(--coklat);
+  color: var(--putih);
+}
+
+/* Icon login */
+.login-icon {
+  width: 24px;
+  vertical-align: middle;
+}
+
+/* Hero section */
+.hero {
+  background: url('../images/hero-kopi.jpg') center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--putih);
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+}
+
+/* Section umum */
+section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+section h2 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: var(--coklat);
+}
+
+/* FORM - Kontak, Login, Admin */
+.contact-form,
+.login-form,
+.admin-form {
+  max-width: 600px;
+  margin: auto;
+  background: var(--putih);
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+}
+
+.contact-form input,
+.login-form input,
+.admin-form input,
+.contact-form textarea,
+.admin-form textarea,
+.admin-form select {
+  width: 100%;
+  padding: 0.9rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 1rem;
+}
+
+.contact-form button,
+.login-form button,
+.admin-form button {
+  width: 100%;
+  padding: 0.9rem;
+  background: var(--coklat);
+  color: var(--putih);
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-form button:hover,
+.login-form button:hover,
+.admin-form button:hover {
+  background: #8c5a53;
+}
+
+/* Admin Page Layout Fix */
+main.admin-page {
+  flex: 1;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.admin-page h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.2rem;
+  color: var(--coklat);
+  margin-bottom: 2rem;
+}
+
+/* Menu Card */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.menu-card {
+  background: var(--putih);
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s;
+}
+
+.menu-card:hover {
+  transform: translateY(-5px);
+}
+
+.menu-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.menu-card h3 {
+  font-size: 1.2rem;
+  color: var(--coklat);
+}
+
+.menu-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  background-color: var(--putih);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #777;
+  box-shadow: inset 0 1px 5px rgba(0,0,0,0.05);
+  margin-top: auto;
+}
+
+/* About Page */
+.about-content {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-content h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.8rem;
+  margin-bottom: 2.5rem;
+  color: var(--coklat);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2.5rem;
+  text-align: left;
+}
+
+.about-item {
+  background-color: var(--putih);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.about-item:hover {
+  transform: translateY(-8px);
+}
+
+.about-item img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  height: 180px;
+  margin-bottom: 1rem;
+}
+
+.about-item h2 {
+  font-family: 'Pacifico', cursive;
+  color: var(--coklat);
+  margin-bottom: 0.7rem;
+  font-size: 1.6rem;
+}
+
+.about-item p {
+  font-size: 1rem;
+  color: var(--hitam);
+  line-height: 1.5;
+}
+
+/* Menu Items (Page Menu) */
+.menu-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.menu-item {
+  width: 220px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+}
+
+.menu-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.rating {
+  color: #e67e22;
+  font-size: 1.2em;
+}
+
+/* Halaman Contact (Tampilan Responsive) */
+main.contact-page {
+  flex: 1;
+  padding: 40px;
+  background-color: #fff7f0;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}

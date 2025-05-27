@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - Tambah Menu</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Kopi Be</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="admin.html" class="active">Admin</a></li>
+        <li><a href="php/logout.php">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="admin-page">
+    <h1>Tambah Menu Baru</h1>
+    <form action="php/tambah_menu.php" method="POST" enctype="multipart/form-data" class="admin-form">
+      <input type="text" name="nama" placeholder="Nama Menu" required>
+      <textarea name="deskripsi" placeholder="Deskripsi" required></textarea>
+      <select name="kategori">
+        <option value="Kopi">Kopi</option>
+        <option value="Tea">Tea</option>
+        <option value="Frappe">Frappe</option>
+        <option value="Milkshake">Milkshake</option>
+        <option value="Snack">Snack</option>
+      </select>
+      <input type="number" name="harga" placeholder="Harga (Rp)" required>
+      <input type="file" name="gambar" required>
+      <button type="submit">Tambah Menu</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Kopi Be. Semua hak dilindungi.</p>
+  </footer>
+</body>
+</html>

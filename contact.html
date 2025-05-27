@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Kontak Kami - Kopi Be</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Kopi Be</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">Tentang</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="lokasi.html">Lokasi</a></li>
+        <li><a href="contact.html" class="active">Kontak</a></li>
+        <li><a href="login.html"><img src="images/user-icon.jpg" class="login-icon"></a></li>
+      </ul>
+    </nav>
+  </header>
+
+ <main class="contact-page">
+  <h1>Hubungi Kami</h1>
+  <div class="contact-container">
+    <form action="php/contact.php" method="POST" class="contact-form">
+      <input type="text" name="nama" placeholder="Nama Kamu" required>
+      <input type="email" name="email" placeholder="Email Aktif" required>
+      <textarea name="pesan" rows="5" placeholder="Tulis pesan kamu..." required></textarea>
+      <button type="submit">Kirim Pesan</button>
+    </form>
+    
+    <div class="contact-image">
+      <img src="images/contact-img.jpg" alt="Kopi Be Kontak" />
+    </div>
+  </div>
+</main>
+
+
+  <footer>
+    <p>&copy; 2025 Kopi Be. Semua hak dilindungi.</p>
+  </footer>
+</body>
+</html>
